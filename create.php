@@ -55,10 +55,6 @@
                 <select size="1" name="profilo" >
                 <option></option>
 <?php
-                $db_data_host="localhost";
-                $db_data_user="radius";
-                $db_data_password="passworddelradius";
-                $db_data_dbname="radius";
 
                 $conn = mysql_connect($db_data_host,$db_data_user,$db_data_password);
                 if (!$conn) {
