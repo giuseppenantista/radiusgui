@@ -1,13 +1,13 @@
 <html>
 <head>
-<title>IC Radius Management :: Benvenuto</title>
-<link rel="shortcut icon" href="../skins/larry/images/favicon.ico"/>
-<link rel="stylesheet" type="text/css" href="../skins/larry/styles.css?s=1364417489" />
+<title>RadiusGUI :: Benvenuto</title>
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="styles.css?s=1364417489" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
-<a href="http://radius.sra.mlib.cnr.it/" target="_self"><img src="../skins/larry/images/logo.png" id="logo" border="0" alt="IC Radius Management"><h1>IC Radius Management Interface</h1></a>
+<img src="logo.png" id="logo" border="0" alt="RadiusGUI"><h1>RadiusGUI Interface</h1>
 
 <table width="450" cellpadding="5" cellspacing="5" border="1">
 
@@ -83,7 +83,7 @@
         }
         $ip=$riga[0];
         mysql_query("UPDATE userinfo set ip='$ip' where Username='$UserName'");
-//      Aggiorno l'ip assegndolo come usato
+//      Aggiorno l'ip segndolo come usato
         mysql_query("UPDATE ip set used=1 where address='$ip'");
 //      IP va messo anche su radreply
         mysql_query("INSERT into radreply (UserName,Attribute,op,Value) values ('$UserName','Framed-IP-Address',':=','$ip')");
@@ -95,7 +95,7 @@
                 die('Errore profilo non trovato: ' . mysql_error());
         }
         mysql_query("INSERT into radreply (UserName,Attribute,op,Value) values ('$UserName','Mikrotik-Rate-Limit',':=','$a[0]')");
-//      Fine blocco profili
+//      Fine del blocco relativo al profilo
         mysql_query("UPDATE userinfo set note='$note' where Username='$UserName'");
 
         echo "<h2>UPDATE COMPLETATO <br>";
