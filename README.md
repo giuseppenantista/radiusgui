@@ -8,3 +8,4 @@ Install radius with MySQL Backend, Apache2 and PHP5
 Use modrewrite in order to limit access via .htaccess
 
 Creation of new IP pools is beta and only support /24 subnets
+Import db_mysql.sql inside your database
