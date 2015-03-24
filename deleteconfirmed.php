@@ -1,13 +1,13 @@
 <html>
 <head>
-<title>IC Radius Management :: Benvenuto</title>
-<link rel="shortcut icon" href="../skins/larry/images/favicon.ico"/>
-<link rel="stylesheet" type="text/css" href="../skins/larry/styles.css?s=1364417489" />
+<title>RadiusGUI :: Benvenuto</title>
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="styles.css?s=1364417489" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
-<a href="http://radius.sra.mlib.cnr.it/" target="_self"><img src="../skins/larry/images/logo.png" id="logo" border="0" alt="IC Radius Management"><h1>IC Radius Management Interface</h1></a>
+<img src="logo.png" id="logo" border="0" alt="RadiusGUI"><h1>RadiusGUI Interface</h1>
 
 <table width="450" cellpadding="5" cellspacing="5" border="1">
 
@@ -17,7 +17,6 @@
         // La pagina delete.php mi ha passato i campi Username e submit con valore "Cancella"
 
         $UserName=$_REQUEST['UserName'];
-//      $password=$_REQUEST['submit'];
 
         $conn = mysql_connect($db_data_host,$db_data_user,$db_data_password);
         if (!$conn) {
